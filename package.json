@@ -2,7 +2,8 @@
   "name": "ap-2018",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently --kill-others \"rollup -c -w\" \"gulp watch\"",
+    "dev-server": "live-server --port=3030 --watch=public/assets/ public/",
+    "dev": "concurrently --kill-others \"rollup -c -w\" \"gulp watch\" \"npm run dev-server\"",
     "build": "rollup -c && gulp build"
   },
   "author": "Tim Rosskamp",
