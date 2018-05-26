@@ -1,14 +1,34 @@
 .c-navigation {
 
     &__list {
-
+        display: flex;
     }
 
     &__item {
+        position: relative;
 
+        * + & {
+            margin-left: 3em;
+        }
+
+        &.-active {
+            color: color('primary');
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: -0.5em;
+                right: -0.5em;
+                height: 2px;
+                background: color('primary');
+            }
+        }
     }
 
     &__link {
-
+        display: inline-block;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 1em 0;
     }
 }
