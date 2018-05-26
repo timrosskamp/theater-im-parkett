@@ -11,7 +11,27 @@ const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
 const cssnano = require('cssnano');
 
-gulp.task('build', done => {
+// HTML
+const fileInclude = require('gulp-file-include');
+const htmlPrettify = require('gulp-html-prettify');
+
+
+gulp.task('html', function(done){
+	pump([
+		gulp.src('src/html/*.html'),
+		fileInclude({
+			prefix: '@@',
+			basepath: 'src/html/partials/'
+		}),
+		htmlPrettify({
+			indent_char: ' ',
+			indent_size: 4
+		}),
+		gulp.dest('./public')
+	], done);
+});
+
+gulp.task('sass', done => {
 	pump([
 		gulp.src([
 			'src/scss/1-settings/*.scss',
@@ -38,10 +58,13 @@ gulp.task('build', done => {
 				}
 			})
         ]),
-		gulp.dest('assets/css')
+		gulp.dest('public/assets/css')
 	], done);
 });
 
+gulp.task('build', ['sass', 'html']);
+
 gulp.task('watch', () => {
-	gulp.watch(['src/scss/**'], {cwd: __dirname}, ['build']);
+	gulp.watch(['src/scss/**'], {cwd: __dirname}, ['sass']);
+	gulp.watch(['src/html/**'], {cwd: __dirname}, ['html']);
 });

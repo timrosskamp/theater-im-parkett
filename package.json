@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently --kill-others \"rollup -c -w\" \"gulp watch\"",
-    "build": "rollup -c && gulp build && cp -n node_modules/animejs/anime.min.js assets/js"
+    "build": "rollup -c && gulp build"
   },
   "author": "Tim Rosskamp",
   "license": "UNLICENSED",
