@@ -25,24 +25,25 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header class="c-header">
-            <div class="c-header__content">
-                <a class="c-header__siteLink" href="index.html">
-                    <img src="assets/img/logo_theater-im-parkett.png" alt="Das Logo vom Theater im Parkett">
-                </a>
-                <nav class="c-navigation">
-                    <ul class="c-navigation__list">
-                        {% for item in navigation %}
-                            <li class="c-navigation__item{% if item.url == url %} -active{% endif %}">
-                                {% if item.url %}
-                                <a class="c-navigation__link" href="{{ item.url }}">{{ item.label }}</a>
-                                {% else %}
-                                <span class="c-navigation__link">{{ item.label }}</a>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <div class="c-wrap">
+            <header class="c-header">
+                <div class="c-header__content">
+                    <a class="c-header__siteLink" href="index.html">
+                        <img src="assets/img/logo_theater-im-parkett.png" alt="Das Logo vom Theater im Parkett">
+                    </a>
+                    <nav class="c-navigation">
+                        <ul class="c-navigation__list">
+                            {% for item in navigation %}
+                                <li class="c-navigation__item{% if item.url == url %} -active{% endif %}">
+                                    {% if item.url %}
+                                    <a class="c-navigation__link" href="{{ item.url }}">{{ item.label }}</a>
+                                    {% else %}
+                                    <span class="c-navigation__link">{{ item.label }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 {% endmacro %}

@@ -13,7 +13,6 @@ const cssnano = require('cssnano');
 
 // HTML
 const nunjucks = require('gulp-nunjucks-render');
-const htmlPrettify = require('gulp-html-prettify');
 
 
 gulp.task('html', function(done){
@@ -23,10 +22,6 @@ gulp.task('html', function(done){
 			path: [
 				'src/html/partials'
 			]
-		}),
-		htmlPrettify({
-			indent_char: ' ',
-			indent_size: 4
 		}),
 		gulp.dest('./public')
 	], done);
