@@ -1,3 +1,50 @@
 .c-timetable {
-    
+    max-width: $grid-width;
+    padding: 0 1em;
+    margin: 0 auto;
+
+    &__list {
+        margin-top: 3em;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 10.5em 2fr 2fr;
+        padding: 1.5em 0;
+        border-bottom: 1px solid color('white');
+        &:first-child {
+            border-top: 1px solid color('white');
+        }
+    }
+
+    &__time {
+        line-height: 1;
+        position: relative;
+        white-space: nowrap;
+        padding-top: 0.2em;
+        padding-right: 2em;
+        border-right: 1px solid color('grey', 'dark');
+    }
+
+    &__date {
+        font-family: $font-headline;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 1.5em;
+        color: color('primary');
+    }
+
+    &__head {
+        padding: 0 2em;
+    }
+
+    &__title {
+        @include ms-respond('font-size', 2);
+    }
+
+    &__text {
+        border-left: 1px solid color('grey', 'dark');
+        padding-left: 2em;
+        padding-top: 0.2em;
+    }
 }

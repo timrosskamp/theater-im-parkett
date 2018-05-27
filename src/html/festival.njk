@@ -31,21 +31,61 @@
 </div>
 
 {% set items = [{
-    von: "19 Uhr",
-    bis: "19.30 Uhr",
+    von: "19",
+    bis: "19.30",
     title: "Kaltgestellt",
     subtitle: "Eine Groteske von Michele Lowe",
     desc: "Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder."
 }, {
-    label: "test 2"
+    von: "19.45",
+    bis: "20.15",
+    title: "Die lustigen Weiber von Windsor",
+    subtitle: "Eine Komödie nach William Shakespeare",
+    desc: "Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss."
+}, {
+    von: "20.30",
+    bis: "21",
+    title: "Der Besuch der alten Dame",
+    subtitle: "Ein Drama von Friedrich Dürrenmatt",
+    desc: "Das beschauliche Güllen bekommt Besuch von einer Milliardärin, die viel Geld verspricht, wenn eine im Grunde unerfüllbare Bedingung eingelöst wird. Nun beginnt es zu rumoren im Ort."
+}, {
+    von: "21.45",
+    bis: "22.15",
+    title: "Hörst du mein heimliches Rufen",
+    subtitle: "Der Erstling von Thomas Jonigk",
+    desc: "Ein erfolgreicher Manager wird entlassen. Erst will er sich umbringen; dann fehlt ihm doch der Mut. In seiner Verzweiflung erlebt er entscheidende Stationen seines chaotischen Lebens nach."
+}, {
+    von: "22.45",
+    bis: "23.15",
+    title: "Der Gott des Gemetzels (Proben-Ausschnitt)",
+    subtitle: "Ein Gesellschaftsdrama von Yasmina Reza",
+    desc: "Lernt der Mensch gar nichts aus seinen Erfahrungen? Ist er zur Wiederholung der Grausamkeiten verurteilt? Warum eskaliert ein kleiner Streit unter Kindern so weit, dass sich die Eltern anscheinend unentwirrbar in die Haare kriegen?"
+}, {
+    von: "23.30",
+    bis: "24",
+    title: "Der kleine Häwelmann",
+    subtitle: "Ein Märchen nach Theodor Storm",
+    desc: "Der kleine Häwelmann reist mit seinem Bett in den Himmel und zu den Sternen. Und der Mond begleitet ihn."
 }] %}
 
 <div class="c-timetable  u-gapLarge">
-    <h2>Festival-Programm</h2>
-    <p>am Samstag, 13. Oktober 2018</p>
-    <ul>
+    <h2 class="text-center">Festival-Programm</h2>
+    <p class="o-subhead  text-center">am Samstag, 13. Oktober 2018</p>
+    <ul class="c-timetable__list">
         {% for item in items %}
-            <li class="">{{ item.label }}</li>
+            <li class="c-timetable__item">
+                <div class="c-timetable__time">
+                    <span class="c-timetable__date">{{ item.von }} Uhr</span><br>
+                    bis&nbsp;<span class="c-timetable__date">{{ item.bis }} Uhr</span>
+                </div>
+                <div class="c-timetable__head">
+                    <h3 class="c-timetable__title">{{ item.title }}</h3>
+                    <p>{{ item.subtitle }}</p>
+                </div>
+                <div class="c-timetable__text">
+                    <p>{{ item.desc }}</p>
+                </div>
+            </li>
         {% endfor %}
     </ul>
 </div>
