@@ -1,0 +1,81 @@
+.c-animation {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    &__frame {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #frame-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../img/animation/frame-1.jpg');
+        background-size: cover;
+    }
+
+    #frame-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../img/animation/frame-2.jpg');
+        background-size: cover;
+    }
+
+    .text-hl {
+        font-family: $font-headline;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    .text-primary {
+        fill: color('primary');
+    }
+
+    &__border {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+        border: 2px solid color('white');
+
+        .progress {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: color('primary');
+        }
+
+        span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid color('white');
+        }
+
+        .top-left {
+            top: -10px;
+            left: -10px;
+        }
+        .top-right {
+            top: -10px;
+            right: -10px;
+        }
+        .bottom-left {
+            bottom: -10px;
+            left: -10px;
+        }
+        .bottom-right {
+            bottom: -10px;
+            right: -10px;
+        }
+    }
+}

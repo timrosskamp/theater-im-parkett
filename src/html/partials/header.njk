@@ -14,7 +14,7 @@
     "label": "Anfahrt"
 }] %}
 
-{% macro header(title, url) %}
+{% macro header(title, url, animation = false) %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+        {% if animation == true %}
+        {% include "animation.njk" %}
+        {% endif %}
         <div class="c-wrap">
             <header class="c-header">
                 <div class="c-header__content">
