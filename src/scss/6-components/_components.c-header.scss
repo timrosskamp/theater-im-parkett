@@ -1,8 +1,12 @@
 .c-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 0 1em;
     max-width: $grid-width;
     margin: 0 auto;
-    
+
     &__content {
         border-bottom: 2px solid color('white');
         display: flex;

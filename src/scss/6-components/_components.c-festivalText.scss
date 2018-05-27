@@ -1,0 +1,10 @@
+.c-festivalText {
+    background-image: url('../img/zuschauer.jpg');
+    background-size: cover;
+
+    &__content {
+        padding: 4em 1em 0;
+        margin: 0 auto;
+        max-width: 32em;
+    }
+}
