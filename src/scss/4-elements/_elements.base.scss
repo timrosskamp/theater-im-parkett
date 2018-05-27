@@ -36,3 +36,21 @@ p, blockquote {
         margin-top: 1em;
     }
 }
+
+blockquote {
+    padding-left: 3.5em;
+    position: relative;
+    font-style: italic;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 2.5em;
+        height: 2.5em;
+        background: url('../img/quote-icon.svg');
+        background-size: 100%;
+        position: absolute;
+        top: 0.2em;
+        left: 0;
+    }
+}

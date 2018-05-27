@@ -2,9 +2,10 @@
     display: inline-block;
     text-decoration: none;
     padding: 0.2em 1em;
-    border: 2px solid currentColor;
+    border: 2px solid color('primary');
+
     &:hover {
-        background: currentColor;
+        background: color('primary');
         color: color('white');
     }
 }

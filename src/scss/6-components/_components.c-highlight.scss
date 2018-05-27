@@ -1,0 +1,56 @@
+.c-highlight {
+    position: relative;
+    text-align: center;
+
+    &__title {
+        color: color('white');
+        padding: 4rem 0;
+    }
+
+    &__date {
+        width: 10em;
+        margin: 0 auto;
+        position: relative;
+        top: 1em;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__day {
+        position: relative;
+        font-size: 4em;
+        line-height: 1;
+        padding-bottom: 0.1em;
+    }
+
+    &__month {
+        position: relative;
+        font-size: 1.3em;
+        padding-bottom: 0.7em;
+    }
+
+    &__text {
+        max-width: 40em;
+        margin: 0 auto;
+        padding: 2em;
+        background: color('grey', 'xdark');
+    }
+
+    &:after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../img/zuschauer.jpg');
+        background-size: cover;
+        bottom: 8em;
+    }
+}
