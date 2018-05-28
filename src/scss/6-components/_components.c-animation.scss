@@ -1,4 +1,5 @@
 .c-animation {
+    $this: &;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -35,6 +36,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    #frame-3 {
+
+
+        #{$this}__content {
+            @include ms-respond('font-size', 5);
+            position: absolute;
+            bottom: 100px;
+            left: 12%;
+            right: 12%;
+        }
     }
 
     &__border {

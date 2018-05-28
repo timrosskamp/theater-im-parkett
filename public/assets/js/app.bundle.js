@@ -1,80 +1,61 @@
 (function () {
     'use strict';
 
-    var TL = anime.timeline({
-        easing: 'easeInOutSine',
-        loop: true,
-        autoplay: false
+    var $animation = $('.js-animation');
+    var $progress = $animation.find('.js-progress');
+    var $frame1 = $animation.find('#frame-1');
+    var $frame2 = $animation.find('#frame-2');
+    var $frame3 = $animation.find('#frame-3');
+
+    var TL = new TimelineLite({
+        onComplete: function onComplete() {
+            // Reset Frames
+            $frame2.css('opacity', 0);
+
+            new TweenLite.fromTo($frame3, 1, {
+                opacity: 1
+            }, {
+                opacity: 0
+            });
+
+            // Restart Timeline
+            this.restart();
+        }
     });
 
-    setTimeout(function () {
-        return TL.play();
-    }, 700);
+    TL.add([TweenLite.fromTo($progress, 5, {
+        width: "0%"
+    }, {
+        width: "100%"
+    }), TweenLite.to($frame1.find('.js-img'), 5, {
+        scale: 1.2
+    }), TweenLite.from($frame1.find('.js-content'), 2, {
+        opacity: 0,
+        scale: 0.5,
+        yPercent: 20
+    })]);
 
-    TL.add({
-        targets: '.js-animation .js-progress',
-        width: ['0%', '100%'],
-        duration: 5000
-    });
+    TL.add([TweenLite.fromTo($progress, 5, {
+        width: "0%"
+    }, {
+        width: "100%"
+    }), TweenLite.to($frame2, 1, {
+        opacity: 1
+    }), TweenLite.from($frame2.find('.js-img'), 5, {
+        scale: 1.2,
+        xPercent: 8
+    }), TweenLite.from($frame2.find('.js-content'), 2, {
+        opacity: 0,
+        scale: 0.5,
+        yPercent: 20
+    })]);
 
-    TL.add({
-        targets: '#frame-1 .js-img',
-        scale: [1, 1.2],
-        duration: 5000,
-        offset: "-=5000"
-    });
-
-    TL.add({
-        targets: '#frame-1 .js-content',
-        opacity: [0, 1],
-        scale: [0.5, 1],
-        offset: "-=5000"
-    });
-
-    TL.add({
-        targets: '#frame-1 .js-content line',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        delay: function delay(el, i) {
-            return i * 500;
-        },
-        offset: "-=5000"
-    });
-
-    TL.add({
-        targets: '.js-animation .js-progress',
-        width: ['0%', '100%'],
-        duration: 5000
-    });
-
-    TL.add({
-        targets: '#frame-2 .js-img',
-        scale: [1.2, 1],
-        translateX: ["5vw", 0],
-        duration: 5000,
-        offset: "-=5000"
-    });
-
-    TL.add({
-        targets: '#frame-2',
-        opacity: [0, 1],
-        duration: 1500,
-        offset: "-=5000"
-    });
-
-    TL.add({
-        targets: '#frame-2 .js-content',
-        opacity: [0, 1],
-        scale: [0.5, 1],
-        offset: "-=4000"
-    });
-
-    TL.add({
-        targets: '#frame-2 .js-content line',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        delay: function delay(el, i) {
-            return i * 500;
-        },
-        offset: "-=4000"
-    });
+    TL.add([TweenLite.fromTo($progress, 5, {
+        width: "0%"
+    }, {
+        width: "100%"
+    }), TweenLite.to($frame3, 1, {
+        opacity: 1
+    })]);
 
 }());
