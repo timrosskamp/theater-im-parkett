@@ -33,4 +33,17 @@
         offset: "-=5000"
     });
 
+    TL.add({
+        targets: '.js-animation .js-progress',
+        width: ['0%', '100%'],
+        duration: 5000
+    });
+
+    TL.add({
+        targets: '#frame-2',
+        opacity: [0, 1],
+        duration: 1500,
+        offset: "-=5000"
+    });
+
 }());
