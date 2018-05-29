@@ -35,13 +35,19 @@
     bis: "19.30",
     title: "Kaltgestellt",
     subtitle: "Eine Groteske von Michele Lowe",
-    desc: "Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder."
+    desc: "Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder.",
+    img: [
+        "alte-dame/alte-dame-1.jpg"
+    ]
 }, {
     von: "19.45",
     bis: "20.15",
     title: "Die lustigen Weiber von Windsor",
     subtitle: "Eine Komödie nach William Shakespeare",
-    desc: "Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss."
+    desc: "Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss.",
+    img: [
+        "windsor/windsor-1.jpg"
+    ]
 }, {
     von: "20.30",
     bis: "21",
@@ -84,7 +90,9 @@
                 </div>
                 <div class="c-timetable__text">
                     <p>{{ item.desc }}</p>
-                    <p><a href="">Bilder ansehen</a></p>
+                    <p class="gallery">
+                        <a href="assets/img/programm/{{ item.img[0] }}">Bilder ansehen</a>
+                    </p>
                 </div>
             </li>
         {% endfor %}

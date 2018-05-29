@@ -95,4 +95,6 @@
         $('body').removeClass('-navOpen');
     });
 
+    baguetteBox.run('.gallery');
+
 }());
