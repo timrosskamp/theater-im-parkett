@@ -541,6 +541,16 @@ h1+.o-subhead, h2+.o-subhead, h3+.o-subhead {
     max-width: 32em;
 }
 
+.c-footer {
+    border-top: 1px solid #FFFFFF;
+}
+
+.c-footer__inner {
+    padding: 1em;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 .c-header {
     position: absolute;
     top: 0;
@@ -613,7 +623,7 @@ h1+.o-subhead, h2+.o-subhead, h3+.o-subhead {
 .c-highlight__text {
     max-width: 40em;
     margin: 0 auto;
-    padding: 2em;
+    padding: 2em 2em 0;
     background: #111619;
 }
 
@@ -626,7 +636,7 @@ h1+.o-subhead, h2+.o-subhead, h3+.o-subhead {
     right: 0;
     background-image: url("../img/zuschauer.jpg");
     background-size: cover;
-    bottom: 8em;
+    height: 400px;
 }
 
 .c-intro {
@@ -738,11 +748,11 @@ h1+.o-subhead, h2+.o-subhead, h3+.o-subhead {
 }
 
 .u-gapLarge, .u-gapLargeTop {
-    padding-top: 8em;
+    padding-top: 10em;
 }
 
 .u-gapLarge, .u-gapLargeBottom {
-    padding-bottom: 8em;
+    padding-bottom: 10em;
 }
 
 .u-visuallyhidden {
