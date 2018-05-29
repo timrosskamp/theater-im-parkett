@@ -4,8 +4,6 @@
 const gulp = require('gulp');
 const pump = require('pump');
 const concat = require('gulp-concat');
-const Stream = require('readable-stream');
-const cleaner = require('clean-html');
 
 // CSS
 const sass = require('gulp-sass');
@@ -16,39 +14,7 @@ const perfectionist = require('perfectionist');
 
 // HTML
 const nunjucks = require('gulp-nunjucks-render');
-
-function cleanHTML(){
-	var stream = new Stream.Transform({
-		objectMode: true
-	});
-
-	stream._transform = function(file, unused, cb){
-	    if( file.isNull() ){
-	      return cb(null, file);
-	    }
-	    // if( file.isStream()) {
-		// 	file.contents = file.contents.pipe(new Stream.Transform());
-		// 	file.contents._transform = function(chunk, encoding, cb) {
-		// 		//console.log(chunk.toString());
-		// 		cb(null, new Buffer(fn(chunk.toString(), file)))
-		// 	};
-		// 	return cb(null, file);
-	    // }
-
-		cleaner.clean(file.contents.toString(), {
-			'add-break-around-tags': [
-				'svg', 'text', 'mask', 'li', 'span', 'a', 'line', 'img', 'circle', 'path'
-			],
-			'remove-attributes': [],
-			'wrap': false
-		}, function(html) {
-			file.contents = new Buffer(html);
-			cb(null, file);
-		});
-	};
-
-	return stream;
-}
+const cleanHTML = require('./gulpCleanHtml.js');
 
 
 gulp.task('html', function(done){
@@ -59,7 +25,13 @@ gulp.task('html', function(done){
 				'src/html/partials'
 			]
 		}),
-		cleanHTML(),
+		cleanHTML({
+			'add-break-around-tags': [
+				'svg', 'text', 'mask', 'li', 'span', 'a', 'line', 'img', 'circle', 'path'
+			],
+			'remove-attributes': [],
+			'wrap': false
+		}),
 		gulp.dest('./public')
 	], done);
 });
