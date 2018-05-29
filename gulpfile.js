@@ -10,6 +10,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
 const cssnano = require('cssnano');
+const perfectionist = require('perfectionist');
 
 // HTML
 const nunjucks = require('gulp-nunjucks-render');
@@ -42,16 +43,18 @@ gulp.task('sass', done => {
 		sass({
 			includePaths: [
 				'./node_modules'
-			]
+			],
+			outputStyle: 'compressed'
 		}),
 		postcss([
             mqpacker({
                 sort: true
 			}),
-			cssnano({
-				discardComments: {
-					removeAll: true
-				}
+			perfectionist({
+				colorCase: 'upper',
+				colorShorthand: false,
+				trimLeadingZero: false,
+				zeroLengthNoUnit: true
 			})
         ]),
 		gulp.dest('public/assets/css')

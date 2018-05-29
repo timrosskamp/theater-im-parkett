@@ -17,9 +17,9 @@
         align-items: center;
         text-align: center;
 
-        padding: 20px;
+        padding: 30px;
         @include breakpoint('small'){
-            padding: 60px;
+            padding: 80px;
         }
     }
 
@@ -88,7 +88,14 @@
 }
 
 #frame-2 {
-
+    .c-animation__content {
+        .top-text {
+            @include ms-respond('font-size', 6);
+        }
+        .bottom-text {
+            
+        }
+    }
 }
 
 #frame-3 {
