@@ -74,6 +74,11 @@ TL.add([
         scale: 1.3,
         xPercent: -6,
         ease: Power0.easeNone
+    }),
+    TweenLite.from($frame3.find('.js-content'), 2, {
+        opacity: 0,
+        scale: 0.5,
+        yPercent: 20
     })
 ], "-=1");
 
@@ -93,6 +98,11 @@ TL.add([
     TweenLite.from($frame4.find('.js-img'), 8, {
         scale: 1.4,
         ease: Power0.easeNone
+    }),
+    TweenLite.from($frame4.find('.js-content'), 2, {
+        opacity: 0,
+        scale: 0.5,
+        yPercent: 20
     })
 ], "-=1");
 
