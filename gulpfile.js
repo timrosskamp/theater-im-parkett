@@ -9,12 +9,11 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
-const cssnano = require('cssnano');
 const perfectionist = require('perfectionist');
 
 // HTML
 const nunjucks = require('gulp-nunjucks-render');
-const cleanHTML = require('./gulpCleanHtml.js');
+// const cleanHTML = require('./gulpCleanHtml.js');
 
 
 gulp.task('html', function(done){
@@ -25,13 +24,15 @@ gulp.task('html', function(done){
 				'src/html/partials'
 			]
 		}),
-		cleanHTML({
-			'add-break-around-tags': [
-				'svg', 'text', 'mask', 'li', 'span', 'a', 'line', 'img', 'circle', 'path'
-			],
-			'remove-attributes': [],
-			'wrap': false
-		}),
+		// cleanHTML({
+		// 	'add-break-around-tags': [
+		// 		'svg', 'text', 'mask', 'li', 'span', 'a', 'line', 'img', 'circle', 'path'
+		// 	],
+		// 	'remove-attributes': [],
+		// 	'wrap': false,
+		// 	'remove-empty-tags': [],
+		// 	'remove-tags': []
+		// }),
 		gulp.dest('./public')
 	], done);
 });

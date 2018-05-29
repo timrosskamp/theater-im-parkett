@@ -29,11 +29,14 @@
         {% include "animation.njk" %}
         {% endif %}
         <div class="c-wrap">
+            <!-- Header Begin -->
             <header class="c-header">
                 <div class="c-header__content">
+                    <!-- Logo -->
                     <a class="c-header__siteLink" href="index.html">
                         <img src="assets/img/logo_theater-im-parkett.png" alt="Das Logo vom Theater im Parkett">
                     </a>
+                    <!-- Navigation -->
                     <nav class="c-navigation">
                         <ul class="c-navigation__list">
                             {% for item in navigation %}
@@ -46,12 +49,14 @@
                                 </li>
                             {% endfor %}
                         </ul>
+                        <!-- Navigation schließen Button -->
                         <button class="c-navigation__close  js-navClose">
                             <svg width="20" height="20" viewBox="0 0 20 20">
                                 <path fill="currentColor" d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
                             </svg>
                         </button>
                     </nav>
+                    <!-- Burger Button -->
                     <button class="c-header__menu  js-navToggle">
                         <svg width="20" height="20" viewBox="0 0 20 20">
                             <path fill="currentColor" d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
@@ -59,4 +64,5 @@
                     </button>
                 </div>
             </header>
+            <!-- Header Ende -->
 {% endmacro %}
