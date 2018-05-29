@@ -75,15 +75,16 @@
         {% for item in items %}
             <li class="c-timetable__item">
                 <div class="c-timetable__time">
-                    <span class="c-timetable__date">{{ item.von }} Uhr</span><br>
-                    bis&nbsp;<span class="c-timetable__date">{{ item.bis }} Uhr</span>
+                    <span class="c-timetable__date text-hl">{{ item.von }} Uhr</span><br>
+                    bis&nbsp;<span class="c-timetable__date text-hl">{{ item.bis }} Uhr</span>
                 </div>
                 <div class="c-timetable__head">
-                    <h3 class="c-timetable__title">{{ item.title }}</h3>
-                    <p>{{ item.subtitle }}</p>
+                    <h3>{{ item.title }}</h3>
+                    <p class="o-subhead">{{ item.subtitle }}</p>
                 </div>
                 <div class="c-timetable__text">
                     <p>{{ item.desc }}</p>
+                    <p><a href="">Bilder ansehen</a></p>
                 </div>
             </li>
         {% endfor %}

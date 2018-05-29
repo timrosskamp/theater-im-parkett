@@ -11,7 +11,7 @@ const TL = new TimelineLite({
         $frame2.css('opacity', 0);
         $frame3.css('opacity', 0);
 
-        new TweenLite.fromTo($frame4, 1, {
+        TweenLite.fromTo($frame4, 1, {
             opacity: 1
         }, {
             opacity: 0
@@ -22,6 +22,8 @@ const TL = new TimelineLite({
     }
 });
 
+
+// Frame 1
 TL.add([
     TweenLite.fromTo($progress, 4, {
         width: "0%"
@@ -29,7 +31,7 @@ TL.add([
         width: "100%",
         ease: Power1.easeInOut
     }),
-    TweenLite.to($frame1.find('.js-img'), 4, {
+    TweenLite.to($frame1.find('.js-img'), 5, {
         scale: 1.1,
         ease: Power0.easeNone
     }),
@@ -40,6 +42,7 @@ TL.add([
     })
 ]);
 
+// Frame 2
 TL.add([
     TweenLite.fromTo($progress, 4, {
         width: "0%"
@@ -50,7 +53,7 @@ TL.add([
     TweenLite.to($frame2, 1, {
         opacity: 1
     }),
-    TweenLite.from($frame2.find('.js-img'), 4, {
+    TweenLite.from($frame2.find('.js-img'), 5, {
         scale: 1.05,
         xPercent: 3,
         ease: Power0.easeNone
@@ -60,8 +63,9 @@ TL.add([
         scale: 0.5,
         yPercent: 20
     })
-]);
+], "-=1");
 
+// Frame 3
 TL.add([
     TweenLite.fromTo($progress, 4, {
         width: "0%"
@@ -72,15 +76,16 @@ TL.add([
     TweenLite.to($frame3, 1, {
         opacity: 1
     }),
-    TweenLite.fromTo($frame3.find('.js-img'), 4, {
+    TweenLite.fromTo($frame3.find('.js-img'), 5, {
         scale: 1.1
     }, {
         scale: 1,
-        xPercent: -4,
+        xPercent: -2,
         ease: Power0.easeNone
     })
-]);
+], "-=1");
 
+// Frame 4
 TL.add([
     TweenLite.fromTo($progress, 8, {
         width: "0%"
@@ -95,4 +100,4 @@ TL.add([
         scale: 1.2,
         ease: Power0.easeNone
     })
-]);
+], "-=1");

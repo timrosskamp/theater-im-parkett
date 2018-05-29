@@ -6,10 +6,10 @@ $fontsize: 16; // Define a px value here, but don't add a unit
 $modularscale: (
     base: $fontsize * 1em / 16,
     ratio: 1.15,
-    30em: (
+    46.938em: (
         ratio: 1.15
     ),
-    60em: (
+    75.063em: (
         ratio: 1.25
     )
 );

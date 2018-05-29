@@ -28,9 +28,10 @@
     "gulp-postcss": "^7.0.1",
     "gulp-remove-empty-lines": "^0.1.0",
     "gulp-sass": "^4.0.1",
+    "live-server": "^1.2.0",
     "modularscale-sass": "^3.0.5",
     "pump": "^3.0.0",
-    "rollup": "^0.59.1",
+    "rollup": "^0.59.4",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-includepaths": "^0.2.2"
   }
