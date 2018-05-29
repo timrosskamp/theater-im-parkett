@@ -7,16 +7,6 @@ const $frame4 = $animation.find('#frame-4');
 
 const TL = new TimelineLite({
     onComplete: function(){
-        // Reset Frames
-        $frame2.css('opacity', 0);
-        $frame3.css('opacity', 0);
-
-        TweenLite.fromTo($frame4, 1, {
-            opacity: 1
-        }, {
-            opacity: 0
-        });
-
         // Restart Timeline
         this.restart();
     }
@@ -50,7 +40,9 @@ TL.add([
         width: "100%",
         ease: Power1.easeInOut
     }),
-    TweenLite.to($frame2, 1, {
+    TweenLite.fromTo($frame2, 1, {
+        opacity: 0
+    }, {
         opacity: 1
     }),
     TweenLite.from($frame2.find('.js-img'), 5, {
@@ -73,14 +65,14 @@ TL.add([
         width: "100%",
         ease: Power1.easeInOut
     }),
-    TweenLite.to($frame3, 1, {
+    TweenLite.fromTo($frame3, 1, {
+        opacity: 0
+    }, {
         opacity: 1
     }),
-    TweenLite.fromTo($frame3.find('.js-img'), 5, {
-        scale: 1.1
-    }, {
-        scale: 1,
-        xPercent: -2,
+    TweenLite.to($frame3.find('.js-img'), 5, {
+        scale: 1.3,
+        xPercent: -6,
         ease: Power0.easeNone
     })
 ], "-=1");
@@ -93,11 +85,24 @@ TL.add([
         width: "100%",
         ease: Power1.easeInOut
     }),
-    TweenLite.to($frame4, 1, {
+    TweenLite.fromTo($frame4, 1, {
+        opacity: 0
+    }, {
         opacity: 1
     }),
     TweenLite.from($frame4.find('.js-img'), 8, {
-        scale: 1.2,
+        scale: 1.4,
         ease: Power0.easeNone
     })
 ], "-=1");
+
+TL.call(function(){
+    $frame2.css('opacity', 0);
+    $frame3.css('opacity', 0);
+
+    TweenLite.fromTo($frame4, 1, {
+        opacity: 1
+    }, {
+        opacity: 0
+    });
+});

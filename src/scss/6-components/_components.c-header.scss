@@ -20,9 +20,7 @@
 
     &__menu {
         display: inline-block;
-        padding: 2.5em;
-        position: relative;
-        left: 1.5em;
+        padding: 2.5em 1em;
         @include breakpoint('large'){
             display: none;
         }

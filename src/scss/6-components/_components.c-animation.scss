@@ -11,6 +11,16 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding: 20px;
+        @include breakpoint('small'){
+            padding: 60px;
+        }
     }
 
     &__bg {
@@ -74,32 +84,40 @@
 }
 
 #frame-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 #frame-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 #frame-3 {
+
+
     .c-animation__content {
-        @include ms-respond('font-size', 5);
-        position: absolute;
-        bottom: 100px;
-        left: 12%;
-        right: 12%;
+        @include ms-respond('font-size', 6);
+        text-align: center;
+        transform: rotate(-10deg);
+        margin-top: 30vh;
+        p {
+            margin: 0;
+        }
+
+        .top-text {
+            &:after {
+                content: "";
+                display: block;
+                margin: 0.2em auto 0;
+                width: 5em;
+                height: 2px;
+                background: color('white');
+            }
+        }
     }
 }
 
 #frame-4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
 
     .text {
         @include ms-respond('font-size', 2);

@@ -22,7 +22,7 @@
     }
 
     &__list {
-        padding-top: 3em;
+        padding-top: 4em;
         @include breakpoint('large', 'min'){
             padding-top: 0;
             display: flex;
@@ -34,6 +34,13 @@
 
         &.-active {
             color: color('primary');
+        }
+
+        @include breakpoint('large', 'max'){
+            border-top: 1px solid color('grey', 'xdark');
+            &:last-child {
+                border-bottom: 1px solid color('grey', 'xdark');
+            }
         }
 
         @include breakpoint('large'){
