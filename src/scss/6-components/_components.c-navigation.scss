@@ -1,34 +1,83 @@
 .c-navigation {
+    @include z-index('navigation');
+    @include breakpoint('large', 'max'){
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        background: color('grey', 'dark');
+        transform: translateX(300px);
+        visibility: hidden;
+
+        transition-property: transform, visibility;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
+
+        body.-navOpen & {
+            transform: translateX(0);
+            visibility: visible;
+            transition-timing-function: ease-out;
+        }
+    }
 
     &__list {
-        display: flex;
+        padding-top: 3em;
+        @include breakpoint('large', 'min'){
+            padding-top: 0;
+            display: flex;
+        }
     }
 
     &__item {
         position: relative;
 
-        * + & {
-            margin-left: 3em;
-        }
-
         &.-active {
             color: color('primary');
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: -2px;
-                left: -0.5em;
-                right: -0.5em;
-                height: 2px;
-                background: color('primary');
+        }
+
+        @include breakpoint('large'){
+            * + & {
+                margin-left: 3em;
+            }
+
+            &.-active {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: -0.5em;
+                    right: -0.5em;
+                    height: 2px;
+                    background: color('primary');
+                }
             }
         }
     }
 
     &__link {
-        display: inline-block;
+        display: block;
         text-decoration: none;
-        line-height: 4em;
-        padding: 1em 0;
+        padding: 1em;
+        @include breakpoint('large'){
+            display: inline-block;
+            padding: 1em 0;
+            line-height: 4em;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em;
+        @include breakpoint('large'){
+            display: none;
+        }
+
+        &:hover, &:focus {
+            outline: 0;
+            color: color('primary');
+        }
     }
 }

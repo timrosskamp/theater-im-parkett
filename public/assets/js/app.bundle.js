@@ -87,4 +87,12 @@
         ease: Power0.easeNone
     })], "-=1");
 
+    $('.js-navToggle').on('click', function () {
+        $('body').toggleClass('-navOpen');
+    });
+
+    $('.js-navClose').on('click', function () {
+        $('body').removeClass('-navOpen');
+    });
+
 }());
