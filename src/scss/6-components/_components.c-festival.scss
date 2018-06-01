@@ -1,0 +1,12 @@
+.c-festival {
+    background: url('../img/theaterpublikum.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        max-width: 652px;
+        margin: 0 auto;
+        padding: 0 1em;
+        padding-top: 5em;
+    }
+}

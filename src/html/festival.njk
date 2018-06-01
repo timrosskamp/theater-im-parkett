@@ -1,102 +1,139 @@
-{% from "header.njk" import header %}
+{% set page = "festival.html" %}
+{% set headerAbs = true %}
+{% extends 'layout.njk' %}
 
-{{ header("Theater im Parkett", "festival.html") }}
-
-<div class="c-festivalText u-gapLarge">
-    <div class="c-festivalText__content">
-        <h1>Festival</h1>
-        <p>
-            Für uns als Amateurbühne ist die Teilnahme am Festival Theaterfieber eine große
-            Ehre und eine besondere Herausforderung. Gemessen wird unsere Leistung an der
-            schauspielerischen Qualität, die Profis aus Staats- und Privattheatern auf die
-            Bühne bringen. Wer soll da kein Lampenfieber bekommen? Doch unsere
-            Vereinsvorsitzende, Marie Tausendschön, die selbst auf elf Jahre als Spielleiterin
-            zurückblickt, lässt sich davon nicht beindrucken:
-        </p>
-        <blockquote>
-            „Die Crew weiß, was sie kann. Und Herzklopfen gehört vor einer Aufführung einfach
-            dazu – ob Profi oder Amateur. Das berichten uns erfahrene Schauspieler und
-            Dramaturgen immer wieder, wenn sie mit uns Fortbildungen machen.“
-        </blockquote>
-        <p>
-            Außer der Ehre verbindet Marie Tausendschön mit der Teilnahme am Festival zwei
-            Hoffnungen:
-        </p>
-        <blockquote>
-            „Ich wünsche mir, dass wir ein Publikum auf uns aufmerksam machen, das uns bisher
-            gar nicht kannte. Und vielleicht meldet sich ja auch der eine oder die andere zum
-            Mitspielen.“
-        </blockquote>
+{% block content %}
+    <div class="c-festival  o-article  u-gapLarge">
+        <div class="c-festival__content">
+            <h1 class="c-festival__title">Festival</h1>
+            <p>
+                Für uns als Amateurbühne ist die Teilnahme am Festival Theaterfieber eine große Ehre
+                und eine besondere Herausforderung. Gemessen wird unsere Leistung an der
+                schauspielerischen Qualität, die Profis aus Staats- und Privattheatern auf die Bühne
+                bringen. Wer soll da kein Lampenfieber bekommen? Doch unsere Vereinsvorsitzende, Marie
+                Tausendschön, die selbst auf elf Jahre als Spielleiterin zurückblickt, lässt sich davon
+                nicht beindrucken:
+            </p>
+            <blockquote>
+                „Die Crew weiß, was sie kann. Und Herzklopfen gehört vor einer Aufführung einfach dazu
+                – ob Profi oder Amateur. Das berichten uns erfahrene Schauspieler und Dramaturgen immer
+                wieder, wenn sie mit uns Fortbildungen machen.“
+            </blockquote>
+            <p>
+                Außer der Ehre verbindet Marie Tausendschön mit der Teilnahme am Festival zwei
+                Hoffnungen:
+            </p>
+            <blockquote>
+                „Ich wünsche mir, dass wir ein Publikum auf uns aufmerksam machen, das uns bisher gar
+                nicht kannte. Und vielleicht meldet sich ja auch der eine oder die andere zum
+                Mitspielen.“
+            </blockquote>
+        </div>
     </div>
-</div>
-
-{% set items = [{
-    von: "19",
-    bis: "19.30",
-    title: "Kaltgestellt",
-    subtitle: "Eine Groteske von Michele Lowe",
-    desc: "Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder.",
-    img: [
-        "alte-dame/alte-dame-1.jpg"
-    ]
-}, {
-    von: "19.45",
-    bis: "20.15",
-    title: "Die lustigen Weiber von Windsor",
-    subtitle: "Eine Komödie nach William Shakespeare",
-    desc: "Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss.",
-    img: [
-        "windsor/windsor-1.jpg"
-    ]
-}, {
-    von: "20.30",
-    bis: "21",
-    title: "Der Besuch der alten Dame",
-    subtitle: "Ein Drama von Friedrich Dürrenmatt",
-    desc: "Das beschauliche Güllen bekommt Besuch von einer Milliardärin, die viel Geld verspricht, wenn eine im Grunde unerfüllbare Bedingung eingelöst wird. Nun beginnt es zu rumoren im Ort."
-}, {
-    von: "21.45",
-    bis: "22.15",
-    title: "Hörst du mein heimliches Rufen",
-    subtitle: "Der Erstling von Thomas Jonigk",
-    desc: "Ein erfolgreicher Manager wird entlassen. Erst will er sich umbringen; dann fehlt ihm doch der Mut. In seiner Verzweiflung erlebt er entscheidende Stationen seines chaotischen Lebens nach."
-}, {
-    von: "22.45",
-    bis: "23.15",
-    title: "Der Gott des Gemetzels (Proben-Ausschnitt)",
-    subtitle: "Ein Gesellschaftsdrama von Yasmina Reza",
-    desc: "Lernt der Mensch gar nichts aus seinen Erfahrungen? Ist er zur Wiederholung der Grausamkeiten verurteilt? Warum eskaliert ein kleiner Streit unter Kindern so weit, dass sich die Eltern anscheinend unentwirrbar in die Haare kriegen?"
-}, {
-    von: "23.30",
-    bis: "24",
-    title: "Der kleine Häwelmann",
-    subtitle: "Ein Märchen nach Theodor Storm",
-    desc: "Der kleine Häwelmann reist mit seinem Bett in den Himmel und zu den Sternen. Und der Mond begleitet ihn."
-}] %}
-
-<div class="c-timetable  u-gapLarge">
-    <h2 class="text-center">Festival-Programm</h2>
-    <p class="o-subhead  text-center">am Samstag, 13. Oktober 2018</p>
-    <ul class="c-timetable__list">
-        {% for item in items %}
+    <article class="c-timetable  u-gapLarge">
+        <header class="text-center  u-gapSmallBottom">
+            <h2>Festival-Programm</h2>
+            <p class="o-subhead">am Samstag, 13. Oktober 2018</p>
+        </header>
+        {% set timetable = [{
+            von: "19",
+            bis: "19.30",
+            title: "Kaltgestellt",
+            subtitle: "Eine Groteske von Michele Lowe",
+            desc: "Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder.",
+            img: {
+                "1": "kaltgestellt-1.jpg",
+                "2": "kaltgestellt-2.jpg",
+                "3": "kaltgestellt-3.jpg"
+            }
+        }, {
+            von: "19.45",
+            bis: "20.15",
+            title: "Die lustigen Weiber von Windsor",
+            subtitle: "Eine Komödie nach William Shakespeare",
+            desc: "Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss.",
+            img: {
+                "1": "windsor-1.jpg",
+                "2": "windsor-2.jpg",
+                "3": "windsor-3.jpg",
+                "4": "windsor-4.jpg",
+                "5": "windsor-5.jpg",
+                "6": "windsor-6.jpg"
+            }
+        }, {
+            von: "20.30",
+            bis: "21",
+            title: "Der Besuch der alten Dame",
+            subtitle: "Ein Drama von Friedrich Dürrenmatt",
+            desc: "Das beschauliche Güllen bekommt Besuch von einer Milliardärin, die viel Geld verspricht, wenn eine im Grunde unerfüllbare Bedingung eingelöst wird. Nun beginnt es zu rumoren im Ort.",
+            img: {
+                "1": "alte-dame-1.jpg",
+                "2": "alte-dame-2.jpg",
+                "3": "alte-dame-3.jpg",
+                "4": "alte-dame-4.jpg"
+            }
+        }, {
+            von: "21.45",
+            bis: "22.15",
+            title: "Hörst du mein heimliches Rufen",
+            subtitle: "Der Erstling von Thomas Jonigk",
+            desc: "Ein erfolgreicher Manager wird entlassen. Erst will er sich umbringen; dann fehlt ihm doch der Mut. In seiner Verzweiflung erlebt er entscheidende Stationen seines chaotischen Lebens nach.",
+            img: {
+                "1": "heimliches-rufen-1.jpg",
+                "2": "heimliches-rufen-2.jpg"
+            }
+        }, {
+            von: "22.45",
+            bis: "23.15",
+            title: "Der Gott des Gemetzels (Proben-Ausschnitt)",
+            subtitle: "Ein Gesellschaftsdrama von Yasmina Reza",
+            desc: "Lernt der Mensch gar nichts aus seinen Erfahrungen? Ist er zur Wiederholung der Grausamkeiten verurteilt? Warum eskaliert ein kleiner Streit unter Kindern so weit, dass sich die Eltern anscheinend unentwirrbar in die Haare kriegen?"
+        }, {
+            von: "23.30",
+            bis: "24",
+            title: "Der kleine Häwelmann",
+            subtitle: "Ein Märchen nach Theodor Storm",
+            desc: "Der kleine Häwelmann reist mit seinem Bett in den Himmel und zu den Sternen. Und der Mond begleitet ihn.",
+            img: {
+                "1": "haewelmann-1.jpg",
+                "2": "haewelmann-2.jpg"
+            }
+        }] %}
+        <ul>
+            {% for item in timetable %}
             <li class="c-timetable__item">
                 <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">{{ item.von }} Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">{{ item.bis }} Uhr</span>
+                    <span class="c-timetable__hour  text-hl">{{ item.von }} Uhr</span><br>
+                    bis&ensp;<span class="c-timetable__hour  text-hl">{{ item.bis }} Uhr</span>
                 </div>
                 <div class="c-timetable__head">
-                    <h3>{{ item.title }}</h3>
+                    <h3 class="c-timetable__title">{{ item.title }}</h3>
                     <p class="o-subhead">{{ item.subtitle }}</p>
                 </div>
-                <div class="c-timetable__text">
+                <div class="c-timetable__desc o-article">
                     <p>{{ item.desc }}</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/{{ item.img[0] }}">Bilder ansehen</a>
-                    </p>
+                    {% if item.img %}
+                    <div class="c-timetable__gallery  js-gallery">
+                        <p>
+                            <a class="c-timetable__galleryButton" href="assets/img/programm/{{ item.img['1'] }}">
+                                <svg class="icon icon-camera"><use xlink:href="#icon-camera"></use></svg>
+                                Bilder ansehen
+                            </a>
+                        </p>
+                        {% if item.img | length > 1 %}
+                        <ul class="u-visuallyhidden">
+                            {% for i in range(2, item.img | length + 1 ) %}
+                            <li>
+                                <a href="assets/img/programm/{{ item.img[i] }}">Bild {{ i }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    {% endif %}
                 </div>
             </li>
-        {% endfor %}
-    </ul>
-</div>
-
-{% include "footer.njk" %}
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

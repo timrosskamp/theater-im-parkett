@@ -1,51 +1,68 @@
-{% from "header.njk" import header %}
+{% set page = 'index.html' %}
+{% extends 'layout.njk' %}
 
-{{ header("Theater im Parkett", "index.html", true) }}
+{% block animation %}
+    {% include 'animation.njk' %}
+{% endblock %}
 
-<div class="u-gapLarge">
-    <article class="c-intro">
-        <img class="c-intro__img" src="assets/img/intro.jpg" alt="">
-        <div class="c-intro__text">
-            <p class="o-subhead">Liebe</p>
-            <h2 class="c-intro__title">Theaterfreunde</h2>
-            <p>
-                seit mehr als 50 Jahren bieten wir auf unserer Amateurbühne ein Programm für
-                Groß und Klein. Wir spielen Klassiker – von Shakespeares „Lustigen Weibern von
-                Windsor“ bis zu Dürrenmatts „Besuch der alten Dame“. Wir setzen uns aber auch
-                mit Gegenwartsstücken ganz junger Autoren auseinander. Und wir bieten immer
-                mehrere Stücke für Kinder an – besonders in der Vorweihnachtszeit. Schauen Sie
-                sich einfach auf unserem Spielplan um!
-            </p>
+{% block content %}
+    <h1 class="u-visuallyhidden">Theater im Parkett</h1>
+    <div class="u-gapLarge">
+        <div class="c-showcase">
+            <img class="c-showcase__img" src="assets/img/theater-im-parkett_einleitung.jpg" alt="Ein Theaterdirektor zieht rote Vorhänge auf.">
+            <div class="c-showcase__text  o-article">
+                <p class="o-subhead">Liebe</p>
+                <h2>Theaterfreunde</h2>
+                <p>
+                    seit mehr als 50 Jahren bieten wir auf unserer Amateurbühne ein Programm für
+                    Groß und Klein. Wir spielen Klassiker – von Shakespeares „Lustigen Weibern von
+                    Windsor“ bis zu Dürrenmatts „Besuch der alten Dame“. Wir setzen uns aber auch
+                    mit Gegenwartsstücken ganz junger Autoren auseinander. Und wir bieten immer
+                    mehrere Stücke für Kinder an – besonders in der Vorweihnachtszeit. Schauen Sie
+                    sich einfach auf unserem Spielplan um!
+                </p>
+            </div>
         </div>
-    </article>
-</div>
-
-<div class="c-highlight  u-gapLargeBottom">
-    <h2 class="c-highlight__title">Highlight:</h2>
-    <div class="c-highlight__date">
-        <svg>
-		    <mask id='m' fill='#fff'>
-    			<rect width="100%" height="100%" fill="#fff" />
-                <circle id='c' r='16' fill='#000' cx="100%" cy="50%" />
-                <circle id='c' r='16' fill='#000' cy="50%" />
-    		</mask>
-            <rect width="100%" height="100%" fill="#d4a169" mask="url(#m)" />
-    	</svg>
-        <div class="c-highlight__day text-hl">13</div>
-        <div class="c-highlight__month">OKT</div>
     </div>
-    <div class="c-highlight__text">
-        <p>
-            In diesem Jahr sind wir beim traditionellen Stuttgarter Festival Theaterfieber dabei.
-            Wir freuen uns sehr, Sie am Samstag, 13. Oktober 2018 von 19 bis 24 Uhr in unseren
-            heiligen Hallen in der Hohen Straße begrüßen zu dürfen. Freuen Sie sich auf sechs
-            angespielte Stücke, die Sie hoffentlich animieren, wieder zu kommen und die eine oder
-            andere Aufführung von Anfang bis Ende anzusehen.
-        </p>
-        <p>
-            <a class="o-btn" href="festival.html">mehr erfahren</a>
-        </p>
-    </div>
-</div>
 
-{% include "footer.njk" %}
+    <div class="c-highlight">
+        <div class="u-gapSmall">
+            <h2 class="c-highlight__title">Highlight:</h2>
+        </div>
+        <div class="c-highlight__date">
+            <svg>
+    		    <mask id='mask' fill='#fff'>
+        			<rect width="100%" height="100%" fill="#fff" />
+                    <circle id='c' r='16' fill='#000' cx="100%" cy="50%" />
+                    <circle id='c' r='16' fill='#000' cy="50%" />
+        		</mask>
+                <rect width="100%" height="100%" fill="#d4a169" mask="url(#mask)" />
+        	</svg>
+            <div class="c-highlight__day text-hl">13</div>
+            <div class="c-highlight__month">OKT</div>
+        </div>
+        <div class="c-highlight__text">
+            In diesem Jahr sind wir beim traditionellen Stuttgarter Festival Theaterfieber
+            dabei. Wir freuen uns sehr, Sie am Samstag, 13. Oktober 2018 von 19 bis 24 Uhr in
+            unseren heiligen Hallen in der Hohen Straße begrüßen zu dürfen. Freuen Sie sich auf
+            sechs angespielte Stücke, die Sie hoffentlich animieren, wieder zu kommen und die
+            eine oder andere Aufführung von Anfang bis Ende anzusehen.
+        </div>
+    </div>
+
+    <div class="u-gapLarge">
+        <div class="c-showcase -topAlign">
+            <img class="c-showcase__img" src="assets/img/kaltgestellt-premiere.jpg" alt="Ein Szene-Ausschnitt aus dem Theaterstück Kaltstellt: Eine stehende Frau spielt mit einer Pistole auf eine sitzende Frau.">
+            <div class="c-showcase__text  o-article">
+                <h2 class="c-showcase__title">Aktuelle Premiere:</h2>
+                <p>
+                    Am Freitag, den 12. Oktober präsentieren wir die Premiere von
+                    „Kaltgestellt“. Bestellen Sie Ihr Karten schon heute.
+                </p>
+                <p>
+                    <a class="o-btn" href="#" onclick="return false">Tickets und Termine hier</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

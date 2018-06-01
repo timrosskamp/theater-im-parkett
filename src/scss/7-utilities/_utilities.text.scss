@@ -1,13 +1,13 @@
-.text-center {
-    text-align: center;
-}
-
 .text-hl {
     font-family: $font-headline;
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
 }
 
 .text-primary {
-    fill: color('primary');
+    color: color('primary');
+}
+
+.text-center {
+    text-align: center;
 }

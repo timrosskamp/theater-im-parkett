@@ -9,6 +9,9 @@ body {
     line-height: #{(24px / 16px)};
     background-color: color('grey', 'xdark');
     color: color('white');
+
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 em, i {
@@ -25,32 +28,20 @@ button {
 	cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    * + & {
-        margin-top: 0.8em;
-    }
-}
-
-p, blockquote {
-    * + & {
-        margin-top: 1em;
-    }
-}
-
 blockquote {
-    padding-left: 3.5em;
     position: relative;
+    padding-left: 3.5em;
     font-style: italic;
 
     &:before {
         content: "";
+        position: absolute;
+        top: 0.2em;
+        left: 0;
         display: block;
         width: 2.5em;
         height: 2.5em;
         background: url('../img/quote-icon.svg');
         background-size: 100%;
-        position: absolute;
-        top: 0.2em;
-        left: 0;
     }
 }

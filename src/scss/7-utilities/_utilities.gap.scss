@@ -1,0 +1,15 @@
+.u-gapLarge, .u-gapLargeTop {
+    @include ms-respond('padding-top', 10);
+}
+
+.u-gapLarge, .u-gapLargeBottom {
+    @include ms-respond('padding-bottom', 10);
+}
+
+.u-gapSmall, .u-gapSmallTop {
+    @include ms-respond('padding-top', 7);
+}
+
+.u-gapSmall, .u-gapSmallBottom {
+    @include ms-respond('padding-bottom', 7);
+}

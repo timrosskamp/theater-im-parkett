@@ -1,242 +1,300 @@
-
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Theater im Parkett</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i|Playfair+Display:900i" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        
-        <div class="c-wrap">
-            <!-- Header Begin -->
-            <header class="c-header">
-                <div class="c-header__content">
-                    <!-- Logo -->
-                    <a class="c-header__siteLink" href="index.html">
-                        <img src="assets/img/logo_theater-im-parkett.png" alt="Das Logo vom Theater im Parkett">
-                    </a>
-                    <!-- Navigation -->
-                    <nav class="c-navigation">
-                        <ul class="c-navigation__list">
-                            
-                                <li class="c-navigation__item">
-                                    
-                                    <a class="c-navigation__link" href="index.html">Start</a>
-                                    
-                                </li>
-                            
-                                <li class="c-navigation__item -active">
-                                    
-                                    <a class="c-navigation__link" href="festival.html">Festival</a>
-                                    
-                                </li>
-                            
-                                <li class="c-navigation__item">
-                                    
-                                    <span class="c-navigation__link">Spielplan</a>
-                                    
-                                </li>
-                            
-                                <li class="c-navigation__item">
-                                    
-                                    <span class="c-navigation__link">Tickets</a>
-                                    
-                                </li>
-                            
-                                <li class="c-navigation__item">
-                                    
-                                    <span class="c-navigation__link">Über das Theater</a>
-                                    
-                                </li>
-                            
-                                <li class="c-navigation__item">
-                                    
-                                    <span class="c-navigation__link">Anfahrt</a>
-                                    
-                                </li>
-                            
-                        </ul>
-                        <!-- Navigation schließen Button -->
-                        <button class="c-navigation__close  js-navClose">
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <path fill="currentColor" d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
-                            </svg>
-                        </button>
-                    </nav>
-                    <!-- Burger Button -->
-                    <button class="c-header__menu  js-navToggle">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path fill="currentColor" d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </header>
-            <!-- Header Ende -->
-
-
-<div class="c-festivalText u-gapLarge">
-    <div class="c-festivalText__content">
-        <h1>Festival</h1>
-        <p>
-            Für uns als Amateurbühne ist die Teilnahme am Festival Theaterfieber eine große
-            Ehre und eine besondere Herausforderung. Gemessen wird unsere Leistung an der
-            schauspielerischen Qualität, die Profis aus Staats- und Privattheatern auf die
-            Bühne bringen. Wer soll da kein Lampenfieber bekommen? Doch unsere
-            Vereinsvorsitzende, Marie Tausendschön, die selbst auf elf Jahre als Spielleiterin
-            zurückblickt, lässt sich davon nicht beindrucken:
-        </p>
-        <blockquote>
-            „Die Crew weiß, was sie kann. Und Herzklopfen gehört vor einer Aufführung einfach
-            dazu – ob Profi oder Amateur. Das berichten uns erfahrene Schauspieler und
-            Dramaturgen immer wieder, wenn sie mit uns Fortbildungen machen.“
-        </blockquote>
-        <p>
+<html class="no-js">
+  <head>
+    <script>
+      // Replace .no-js with .js in html
+      (function(h){
+          h.className = h.className.replace(/\bno-js\b/, 'js');
+      })(document.documentElement);
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Playfair+Display:700i" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="c-wrap">
+      <div class="c-header -abs">
+        <div class="c-header__inner">
+          <a href="index.html" class="c-header__logo">
+          <img class="c-header__logoImg" src="assets/img/logo_theater-im-parkett.png" alt="Das Logo von Theater im Parkett.">
+          </a>
+          <nav class="c-navigation">
+            <ul class="c-navigation__list">
+              <li class="c-navigation__item">
+                <a href="index.html" class="c-navigation__link">Start</a>
+              </li>
+              <li class="c-navigation__item -active">
+                <a href="festival.html" class="c-navigation__link">Festival</a>
+              </li>
+              <li class="c-navigation__item">
+                <span class="c-navigation__link">Spielplan</span>
+              </li>
+              <li class="c-navigation__item">
+                <span class="c-navigation__link">Tickets</span>
+              </li>
+              <li class="c-navigation__item">
+                <span class="c-navigation__link">Über das Theater</span>
+              </li>
+              <li class="c-navigation__item">
+                <span class="c-navigation__link">Anfahrt</span>
+              </li>
+            </ul>
+            <!-- Navigation schließen Button -->
+            <button class="c-navigation__close  js-navClose">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path fill="currentColor" d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+              </svg>
+              <span class="u-visuallyhidden">Die Navigation schließen</span>
+            </button>
+          </nav>
+          <!-- Burger Button -->
+          <button class="c-header__menu  js-navToggle">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <path fill="currentColor" d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+            </svg>
+            <span class="u-visuallyhidden">Die Navigation öffnen</span>
+          </button>
+        </div>
+      </div>
+      <div class="c-festival  o-article  u-gapLarge">
+        <div class="c-festival__content">
+          <h1 class="c-festival__title">Festival</h1>
+          <p>
+            Für uns als Amateurbühne ist die Teilnahme am Festival Theaterfieber eine große Ehre
+            und eine besondere Herausforderung. Gemessen wird unsere Leistung an der
+            schauspielerischen Qualität, die Profis aus Staats- und Privattheatern auf die Bühne
+            bringen. Wer soll da kein Lampenfieber bekommen? Doch unsere Vereinsvorsitzende, Marie
+            Tausendschön, die selbst auf elf Jahre als Spielleiterin zurückblickt, lässt sich davon
+            nicht beindrucken:
+          </p>
+          <blockquote>
+            „Die Crew weiß, was sie kann. Und Herzklopfen gehört vor einer Aufführung einfach dazu
+            – ob Profi oder Amateur. Das berichten uns erfahrene Schauspieler und Dramaturgen immer
+            wieder, wenn sie mit uns Fortbildungen machen.“
+          </blockquote>
+          <p>
             Außer der Ehre verbindet Marie Tausendschön mit der Teilnahme am Festival zwei
             Hoffnungen:
-        </p>
-        <blockquote>
-            „Ich wünsche mir, dass wir ein Publikum auf uns aufmerksam machen, das uns bisher
-            gar nicht kannte. Und vielleicht meldet sich ja auch der eine oder die andere zum
+          </p>
+          <blockquote>
+            „Ich wünsche mir, dass wir ein Publikum auf uns aufmerksam machen, das uns bisher gar
+            nicht kannte. Und vielleicht meldet sich ja auch der eine oder die andere zum
             Mitspielen.“
-        </blockquote>
-    </div>
-</div>
-
-
-
-<div class="c-timetable  u-gapLarge">
-    <h2 class="text-center">Festival-Programm</h2>
-    <p class="o-subhead  text-center">am Samstag, 13. Oktober 2018</p>
-    <ul class="c-timetable__list">
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">19 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">19.30 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Kaltgestellt</h3>
-                    <p class="o-subhead">Eine Groteske von Michele Lowe</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder.</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/alte-dame/alte-dame-1.jpg">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">19.45 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">20.15 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Die lustigen Weiber von Windsor</h3>
-                    <p class="o-subhead">Eine Komödie nach William Shakespeare</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss.</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/windsor/windsor-1.jpg">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">20.30 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">21 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Der Besuch der alten Dame</h3>
-                    <p class="o-subhead">Ein Drama von Friedrich Dürrenmatt</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Das beschauliche Güllen bekommt Besuch von einer Milliardärin, die viel Geld verspricht, wenn eine im Grunde unerfüllbare Bedingung eingelöst wird. Nun beginnt es zu rumoren im Ort.</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">21.45 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">22.15 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Hörst du mein heimliches Rufen</h3>
-                    <p class="o-subhead">Der Erstling von Thomas Jonigk</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Ein erfolgreicher Manager wird entlassen. Erst will er sich umbringen; dann fehlt ihm doch der Mut. In seiner Verzweiflung erlebt er entscheidende Stationen seines chaotischen Lebens nach.</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">22.45 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">23.15 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Der Gott des Gemetzels (Proben-Ausschnitt)</h3>
-                    <p class="o-subhead">Ein Gesellschaftsdrama von Yasmina Reza</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Lernt der Mensch gar nichts aus seinen Erfahrungen? Ist er zur Wiederholung der Grausamkeiten verurteilt? Warum eskaliert ein kleiner Streit unter Kindern so weit, dass sich die Eltern anscheinend unentwirrbar in die Haare kriegen?</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-            <li class="c-timetable__item">
-                <div class="c-timetable__time">
-                    <span class="c-timetable__date text-hl">23.30 Uhr</span><br>
-                    bis&ensp;<span class="c-timetable__date text-hl">24 Uhr</span>
-                </div>
-                <div class="c-timetable__head">
-                    <h3>Der kleine Häwelmann</h3>
-                    <p class="o-subhead">Ein Märchen nach Theodor Storm</p>
-                </div>
-                <div class="c-timetable__text">
-                    <p>Der kleine Häwelmann reist mit seinem Bett in den Himmel und zu den Sternen. Und der Mond begleitet ihn.</p>
-                    <p class="gallery">
-                        <a href="assets/img/programm/">Bilder ansehen</a>
-                    </p>
-                </div>
-            </li>
-        
-    </ul>
-</div>
-
-            <div class="c-footer">
-                <div class="c-footer__inner">
-                    &copy; 2018 &ndash; Theater im Parkett
-                </div>
-            </div>
+          </blockquote>
         </div>
+      </div>
+      <article class="c-timetable  u-gapLarge">
+        <header class="text-center  u-gapSmallBottom">
+          <h2>Festival-Programm</h2>
+          <p class="o-subhead">am Samstag, 13. Oktober 2018</p>
+        </header>
+        <ul>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">19 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">19.30 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Kaltgestellt</h3>
+              <p class="o-subhead">Eine Groteske von Michele Lowe</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Das monatliche Treffen der befreundeten Ehepaare endet diesmal unerwartet. Die Männer finden sich im Keller, in einem großen Kühlraum wieder. Und die Frauen ziehen vom Leder.</p>
+              <div class="c-timetable__gallery  js-gallery">
+                <p>
+                  <a class="c-timetable__galleryButton" href="assets/img/programm/kaltgestellt-1.jpg">
+                    <svg class="icon icon-camera">
+                      <use xlink:href="#icon-camera"></use>
+                    </svg>
+                    Bilder ansehen
+                  </a>
+                </p>
+                <ul class="u-visuallyhidden">
+                  <li>
+                    <a href="assets/img/programm/kaltgestellt-2.jpg">Bild 2</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/kaltgestellt-3.jpg">Bild 3</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">19.45 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">20.15 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Die lustigen Weiber von Windsor</h3>
+              <p class="o-subhead">Eine Komödie nach William Shakespeare</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Im Stück erleben wir ferne Figuren aus dem 17. Jahrhundert. Doch zugleich ist uns ihr Verhalten sehr nah, so zeitlos ist das Ringen um Anerkennung, Geld, Liebe und Einfluss.</p>
+              <div class="c-timetable__gallery  js-gallery">
+                <p>
+                  <a class="c-timetable__galleryButton" href="assets/img/programm/windsor-1.jpg">
+                    <svg class="icon icon-camera">
+                      <use xlink:href="#icon-camera"></use>
+                    </svg>
+                    Bilder ansehen
+                  </a>
+                </p>
+                <ul class="u-visuallyhidden">
+                  <li>
+                    <a href="assets/img/programm/windsor-2.jpg">Bild 2</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/windsor-3.jpg">Bild 3</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/windsor-4.jpg">Bild 4</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/windsor-5.jpg">Bild 5</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/windsor-6.jpg">Bild 6</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">20.30 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">21 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Der Besuch der alten Dame</h3>
+              <p class="o-subhead">Ein Drama von Friedrich Dürrenmatt</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Das beschauliche Güllen bekommt Besuch von einer Milliardärin, die viel Geld verspricht, wenn eine im Grunde unerfüllbare Bedingung eingelöst wird. Nun beginnt es zu rumoren im Ort.</p>
+              <div class="c-timetable__gallery  js-gallery">
+                <p>
+                  <a class="c-timetable__galleryButton" href="assets/img/programm/alte-dame-1.jpg">
+                    <svg class="icon icon-camera">
+                      <use xlink:href="#icon-camera"></use>
+                    </svg>
+                    Bilder ansehen
+                  </a>
+                </p>
+                <ul class="u-visuallyhidden">
+                  <li>
+                    <a href="assets/img/programm/alte-dame-2.jpg">Bild 2</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/alte-dame-3.jpg">Bild 3</a>
+                  </li>
+                  <li>
+                    <a href="assets/img/programm/alte-dame-4.jpg">Bild 4</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">21.45 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">22.15 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Hörst du mein heimliches Rufen</h3>
+              <p class="o-subhead">Der Erstling von Thomas Jonigk</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Ein erfolgreicher Manager wird entlassen. Erst will er sich umbringen; dann fehlt ihm doch der Mut. In seiner Verzweiflung erlebt er entscheidende Stationen seines chaotischen Lebens nach.</p>
+              <div class="c-timetable__gallery  js-gallery">
+                <p>
+                  <a class="c-timetable__galleryButton" href="assets/img/programm/heimliches-rufen-1.jpg">
+                    <svg class="icon icon-camera">
+                      <use xlink:href="#icon-camera"></use>
+                    </svg>
+                    Bilder ansehen
+                  </a>
+                </p>
+                <ul class="u-visuallyhidden">
+                  <li>
+                    <a href="assets/img/programm/heimliches-rufen-2.jpg">Bild 2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">22.45 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">23.15 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Der Gott des Gemetzels (Proben-Ausschnitt)</h3>
+              <p class="o-subhead">Ein Gesellschaftsdrama von Yasmina Reza</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Lernt der Mensch gar nichts aus seinen Erfahrungen? Ist er zur Wiederholung der Grausamkeiten verurteilt? Warum eskaliert ein kleiner Streit unter Kindern so weit, dass sich die Eltern anscheinend unentwirrbar in die Haare kriegen?</p>
+            </div>
+          </li>
+          <li class="c-timetable__item">
+            <div class="c-timetable__time">
+              <span class="c-timetable__hour  text-hl">23.30 Uhr</span><br>
+              bis&ensp;<span class="c-timetable__hour  text-hl">24 Uhr</span>
+            </div>
+            <div class="c-timetable__head">
+              <h3 class="c-timetable__title">Der kleine Häwelmann</h3>
+              <p class="o-subhead">Ein Märchen nach Theodor Storm</p>
+            </div>
+            <div class="c-timetable__desc o-article">
+              <p>Der kleine Häwelmann reist mit seinem Bett in den Himmel und zu den Sternen. Und der Mond begleitet ihn.</p>
+              <div class="c-timetable__gallery  js-gallery">
+                <p>
+                  <a class="c-timetable__galleryButton" href="assets/img/programm/haewelmann-1.jpg">
+                    <svg class="icon icon-camera">
+                      <use xlink:href="#icon-camera"></use>
+                    </svg>
+                    Bilder ansehen
+                  </a>
+                </p>
+                <ul class="u-visuallyhidden">
+                  <li>
+                    <a href="assets/img/programm/haewelmann-2.jpg">Bild 2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <div class="c-footer">
+        <div class="c-footer__inner">
+          <p>&copy; 2018 &ndash; Theater im Parkett</p>
+          <p><a href="#" onclick="return false">Impressum</a> &nbsp;|&nbsp; <a href="#" onclick="return false">Datenschutz</a></p>
+        </div>
+      </div>
+    </div>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-camera" viewBox="0 0 24 24">
+          <title>camera</title>
+          <path d="M21 5h-3.5l-1.7-2.6c-0.2-0.2-0.5-0.4-0.8-0.4h-6c-0.3 0-0.6 0.2-0.8 0.4l-1.7 2.6h-3.5c-1.7 0-3 1.3-3 3v11c0 1.7 1.3 3 3 3h18c1.7 0 3-1.3 3-3v-11c0-1.7-1.3-3-3-3zM22 19c0 0.6-0.4 1-1 1h-18c-0.6 0-1-0.4-1-1v-11c0-0.6 0.4-1 1-1h4c0.3 0 0.6-0.2 0.8-0.4l1.7-2.6h4.9l1.7 2.6c0.3 0.2 0.6 0.4 0.9 0.4h4c0.6 0 1 0.4 1 1v11z"></path>
+          <path d="M12 8c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zM12 16c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"></path>
+        </symbol>
+      </defs>
+    </svg>
 
-        <!-- Quelle: https://github.com/kenwheeler/cash -->
-        <script src="assets/js/cash.min.js"></script>
-        <!-- Quelle: https://greensock.com/tweenlite -->
-        <script src="assets/js/TweenLite.min.js"></script>
-        <!-- Quelle: https://greensock.com/CSSPlugin -->
-        <script src="assets/js/CSSPlugin.min.js"></script>
-        <!-- Quelle: https://greensock.com/timelinelite -->
-        <script src="assets/js/TimelineLite.min.js"></script>
-        <!-- Quelle: https://github.com/feimosi/baguetteBox.js/ -->
-        <script src="assets/js/baguetteBox.min.js"></script>
+    <!-- Quelle: https://greensock.com/tweenlite -->
+    <script src="assets/js/TweenLite.min.js"></script>
 
-        <script src="assets/js/app.bundle.js"></script>
-    </body>
+    <!-- Quelle: https://greensock.com/timelinelite -->
+    <script src="assets/js/TimelineLite.min.js"></script>
+
+    <!-- Quelle: https://greensock.com/CSSPlugin -->
+    <script src="assets/js/CSSPlugin.min.js"></script>
+
+    <!-- Quelle: https://github.com/feimosi/baguetteBox.js -->
+    <script src="assets/js/baguetteBox.min.js"></script>
+    
+    <script src="assets/js/scripts.js"></script>
+  </body>
 </html>

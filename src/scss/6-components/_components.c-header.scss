@@ -1,33 +1,40 @@
 .c-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0 1em;
-    max-width: 1300px;
-    margin: 0 auto;
+    &.-abs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
-    &__content {
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    &__inner {
         border-bottom: 2px solid color('white');
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__siteLink {
+    &__logo {
         display: contents;
     }
 
+    &__logoImg {
+        padding: 1em 0;
+    }
+
     &__menu {
-        display: inline-block;
-        padding: 2.5em 1em;
-        @include breakpoint('large'){
-            display: none;
-        }
+        padding: 1em;
 
         &:hover, &:focus {
-            outline: 0;
+            outline: none;
             color: color('primary');
+        }
+
+        @include breakpoint('large'){
+            display: none;
         }
     }
 }

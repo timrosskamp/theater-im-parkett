@@ -1,7 +1,19 @@
-$('.js-navToggle').on('click', () => {
-    $('body').toggleClass('-navOpen');
-});
+(function(){
+    function each(arr, cb){
+        [].forEach.call(arr, cb);
+    }
 
-$('.js-navClose').on('click', () => {
-    $('body').removeClass('-navOpen');
-});
+    each(document.querySelectorAll('.js-navClose'), el =>{
+        el.addEventListener('click', e => {
+            e.preventDefault();
+            document.body.classList.remove('-navOpen');
+        });
+    });
+
+    each(document.querySelectorAll('.js-navToggle'), el =>{
+        el.addEventListener('click', e => {
+            e.preventDefault();
+            document.body.classList.toggle('-navOpen');
+        });
+    });
+})();

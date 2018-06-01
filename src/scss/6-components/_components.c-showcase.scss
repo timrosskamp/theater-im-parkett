@@ -1,0 +1,62 @@
+.c-showcase {
+    $this: &;
+
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 1em;
+
+    @include breakpoint('small'){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+
+    &__img {
+        @include breakpoint('small'){
+            padding-bottom: 2em;
+            #{$this}.-topAlign & {
+                padding-bottom: 0;
+                padding-top: 2em;
+            }
+        }
+    }
+
+    &__text {
+        padding: 2em;
+        background: color('grey', 'dark');
+
+        @include breakpoint('small'){
+            padding: 0;
+            background: none;
+            align-self: end;
+            padding-top: 4em;
+            padding-bottom: 2em;
+            padding-right: 2em;
+
+            #{$this}.-topAlign & {
+                align-self: start;
+                padding-top: 2em;
+                padding-bottom: 4em;
+            }
+        }
+    }
+
+    @include breakpoint('small'){
+        &:after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 2em;
+            left: 3em;
+            right: 1em;
+            bottom: 0;
+            background: color('grey', 'dark');
+        }
+
+        &.-topAlign:after {
+            top: 0;
+            bottom: 2em;
+        }
+    }
+}

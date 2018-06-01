@@ -13,7 +13,6 @@ const perfectionist = require('perfectionist');
 
 // HTML
 const nunjucks = require('gulp-nunjucks-render');
-// const cleanHTML = require('./gulpCleanHtml.js');
 
 
 gulp.task('html', function(done){
@@ -21,21 +20,25 @@ gulp.task('html', function(done){
 		gulp.src('src/html/*.njk'),
 		nunjucks({
 			path: [
-				'src/html/partials'
+				'src/html/partials',
+				'src/html/layout'
 			]
 		}),
-		// cleanHTML({
-		// 	'add-break-around-tags': [
-		// 		'svg', 'text', 'mask', 'li', 'span', 'a', 'line', 'img', 'circle', 'path'
-		// 	],
-		// 	'remove-attributes': [],
-		// 	'wrap': false,
-		// 	'remove-empty-tags': [],
-		// 	'remove-tags': []
-		// }),
 		gulp.dest('./public')
 	], done);
 });
+
+gulp.task('js', done => {
+    pump([
+        gulp.src([
+            'src/js/navigation.js',
+            'src/js/animation.js',
+			'src/js/lightbox.js'
+        ]),
+        concat('scripts.js'),
+        gulp.dest('public/assets/js')
+    ], done);
+})
 
 gulp.task('sass', done => {
 	pump([
@@ -73,6 +76,7 @@ gulp.task('sass', done => {
 gulp.task('build', ['sass', 'html']);
 
 gulp.task('watch', () => {
+	gulp.watch(['src/js/**'], {cwd: __dirname}, ['js']);
 	gulp.watch(['src/scss/**'], {cwd: __dirname}, ['sass']);
 	gulp.watch(['src/html/**'], {cwd: __dirname}, ['html']);
 });

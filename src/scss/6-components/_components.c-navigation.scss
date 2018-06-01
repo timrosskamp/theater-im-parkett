@@ -3,58 +3,53 @@
     @include breakpoint('large', 'max'){
         position: fixed;
         top: 0;
-        right: 0;
+        right: -18em;
         bottom: 0;
-        width: 300px;
-        background: color('grey', 'dark');
-        transform: translateX(300px);
-        visibility: hidden;
+        width: 18em;
+        background-color: color('grey', 'xdark');
 
-        transition-property: transform, visibility;
+        transition-property: right, box-shadow;
         transition-duration: 0.5s;
         transition-timing-function: ease-in;
 
         body.-navOpen & {
-            transform: translateX(0);
-            visibility: visible;
+            right: 0;
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
             transition-timing-function: ease-out;
         }
     }
 
     &__list {
-        padding-top: 4em;
-        @include breakpoint('large', 'min'){
-            padding-top: 0;
-            display: flex;
+        @include breakpoint('large', 'max'){
+            padding-top: 4em;
         }
     }
 
     &__item {
         position: relative;
 
-        &.-active {
-            color: color('primary');
-        }
-
         @include breakpoint('large', 'max'){
-            border-top: 1px solid color('grey', 'xdark');
+            border-top: 1px solid color('grey', 'dark');
             &:last-child {
-                border-bottom: 1px solid color('grey', 'xdark');
+                border-bottom: 1px solid color('grey', 'dark');
             }
         }
 
         @include breakpoint('large'){
-            * + & {
+            display: inline-block;
+            & + * {
                 margin-left: 3em;
             }
+        }
 
-            &.-active {
+        &.-active {
+            @include breakpoint('large'){
                 &:after {
                     content: "";
                     position: absolute;
                     bottom: -2px;
-                    left: -0.5em;
-                    right: -0.5em;
+                    left: 0;
+                    right: 0;
                     height: 2px;
                     background: color('primary');
                 }
@@ -68,23 +63,31 @@
         padding: 1em;
         @include breakpoint('large'){
             display: inline-block;
-            padding: 1em 0;
-            line-height: 4em;
+            padding: 3em 0;
+        }
+
+        .-active & {
+            color: color('primary');
+        }
+
+        &:hover, &:focus {
+            text-decoration: underline;
         }
     }
+
 
     &__close {
         position: absolute;
         top: 0;
         right: 0;
         padding: 1em;
-        @include breakpoint('large'){
-            display: none;
+        &:hover, &:focus {
+            outline: none;
+            color: color('primary');
         }
 
-        &:hover, &:focus {
-            outline: 0;
-            color: color('primary');
+        @include breakpoint('large'){
+            display: none;
         }
     }
 }

@@ -2,8 +2,21 @@
     border-top: 1px solid color('white');
 
     &__inner {
-        padding: 1em;
-        max-width: 1300px;
+        max-width: 1288px;
         margin: 0 auto;
+        padding: 1em;
+
+        & > * + * {
+            margin-top: 1em;
+        }
+
+        @include breakpoint('small'){
+            display: flex;
+            justify-content: space-between;
+
+            & > * {
+                margin: 0;
+            }
+        }
     }
 }
