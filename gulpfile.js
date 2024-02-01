@@ -24,7 +24,7 @@ gulp.task('html', function(done){
 				'src/html/layout'
 			]
 		}),
-		gulp.dest('./public')
+		gulp.dest('./docs')
 	], done);
 });
 
@@ -36,7 +36,7 @@ gulp.task('js', done => {
 			'src/js/lightbox.js'
         ]),
         concat('scripts.js'),
-        gulp.dest('public/assets/js')
+        gulp.dest('docs/assets/js')
     ], done);
 })
 
@@ -69,7 +69,7 @@ gulp.task('sass', done => {
 				zeroLengthNoUnit: true
 			})
         ]),
-		gulp.dest('public/assets/css')
+		gulp.dest('docs/assets/css')
 	], done);
 });
 
